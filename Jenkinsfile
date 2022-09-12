@@ -1,3 +1,5 @@
+
+
 def gv
 
 pipeline {
@@ -12,6 +14,7 @@ pipeline {
                 script {
                    gv = load "script.groovy" 
                 }
+            }
         }
         stage("yarn") {
             steps {
