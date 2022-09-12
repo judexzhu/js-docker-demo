@@ -12,8 +12,12 @@ pipeline {
                 script {
                    gv = load "script.groovy" 
                 }
-                nodejs(Node){
-                   sh 'yarn install'
+        }
+        stage("yarn") {
+            steps {
+                echo 'excuting yarn...'
+                nodejs('Node') {
+                    sh 'yarn install'
             }
         }
         stage("build") {
