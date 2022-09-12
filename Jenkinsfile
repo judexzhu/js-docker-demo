@@ -20,6 +20,7 @@ pipeline {
             steps {
                 echo 'excuting yarn...'
                 nodejs('Node') {
+                    sh 'cd app'
                     sh 'yarn install'
                     sh 'yarn build'
                 }
